@@ -5,11 +5,12 @@
 # If your custom_dataset_directory is in the same folder as data.yaml,
 # you might use: 'custom_dataset_directory/train/images'
 
-train: C:\Users\220250572\OneDrive - Regal Rexnord\Desktop\PPE\Train\images
-val: C:\Users\220250572\OneDrive - Regal Rexnord\Desktop\PPE\Validation\images 
+train: copy your path\Desktop\PPE\Train\images
+val: copy your path \Desktop\PPE\Validation\images 
 
 # Number of classes in your dataset
 nc: 4 # Example: 4 for Glass, Gloves, Helmet and Shoe. Adjust based on your actual classes
 
 # Names of your classes, in the order they are indexed (starting from 0)
 names: ['glass', 'gloves', 'helmet', 'shoe'] # Replace with your actual PPE classes
+
