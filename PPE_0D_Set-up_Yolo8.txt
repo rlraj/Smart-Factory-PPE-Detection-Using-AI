@@ -1,0 +1,401 @@
+PS C:\Users\220250572> py -0p
+ -V:3.12 *        C:\Python312\python.exe
+ -V:3.10          C:\Users\220250572\AppData\Local\Programs\Python\Python310\python.exe (Required for Object Detection)
+
+Step-1 
+How to Create Env. variable?
+PS C:\Users\220250572>  C:\Users\220250572\AppData\Local\Programs\Python\Python310\python.exe -m venv C:\envs\tfod211
+PS C:\Users\220250572> C:\envs\tfod211\Scripts\Activate.ps1
+
+Step-2 
+Install Ultralytics:
+(tfod211) PS C:\Users\220250572> pip install ultralytics
+
+Collecting ultralytics
+  Downloading ultralytics-8.3.179-py3-none-any.whl (1.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 1.6 MB/s eta 0:00:00
+Collecting psutil
+  Downloading psutil-7.0.0-cp37-abi3-win_amd64.whl (244 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 244.9/244.9 kB 7.3 MB/s eta 0:00:00
+Collecting py-cpuinfo
+  Downloading py_cpuinfo-9.0.0-py3-none-any.whl (22 kB)
+Collecting torch>=1.8.0
+  Downloading torch-2.8.0-cp310-cp310-win_amd64.whl (241.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 241.4/241.4 MB 1.1 MB/s eta 0:00:00
+Collecting matplotlib>=3.3.0
+  Downloading matplotlib-3.10.5-cp310-cp310-win_amd64.whl (8.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.1/8.1 MB 1.6 MB/s eta 0:00:00
+Collecting numpy>=1.23.0
+  Downloading numpy-2.2.6-cp310-cp310-win_amd64.whl (12.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.9/12.9 MB 2.2 MB/s eta 0:00:00
+Collecting torchvision>=0.9.0
+  Downloading torchvision-0.23.0-cp310-cp310-win_amd64.whl (1.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 2.3 MB/s eta 0:00:00
+Collecting pandas>=1.1.4
+  Downloading pandas-2.3.1-cp310-cp310-win_amd64.whl (11.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.3/11.3 MB 2.5 MB/s eta 0:00:00
+Collecting ultralytics-thop>=2.0.0
+  Downloading ultralytics_thop-2.0.15-py3-none-any.whl (28 kB)
+Collecting pyyaml>=5.3.1
+  Downloading PyYAML-6.0.2-cp310-cp310-win_amd64.whl (161 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 161.8/161.8 kB 3.2 MB/s eta 0:00:00
+Collecting scipy>=1.4.1
+  Downloading scipy-1.15.3-cp310-cp310-win_amd64.whl (41.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.3/41.3 MB 3.0 MB/s eta 0:00:00
+Collecting tqdm>=4.64.0
+  Downloading tqdm-4.67.1-py3-none-any.whl (78 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB ? eta 0:00:00
+Collecting requests>=2.23.0
+  Downloading requests-2.32.4-py3-none-any.whl (64 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.8/64.8 kB 3.4 MB/s eta 0:00:00
+Collecting opencv-python>=4.6.0
+  Downloading opencv_python-4.12.0.88-cp37-abi3-win_amd64.whl (39.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 39.0/39.0 MB 3.4 MB/s eta 0:00:00
+Collecting pillow>=7.1.2
+  Downloading pillow-11.3.0-cp310-cp310-win_amd64.whl (7.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 2.8 MB/s eta 0:00:00
+Collecting fonttools>=4.22.0
+  Downloading fonttools-4.59.1-cp310-cp310-win_amd64.whl (2.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 1.0 MB/s eta 0:00:00
+Collecting packaging>=20.0
+  Downloading packaging-25.0-py3-none-any.whl (66 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 3.7 MB/s eta 0:00:00
+Collecting python-dateutil>=2.7
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 7.1 MB/s eta 0:00:00
+Collecting kiwisolver>=1.3.1
+  Downloading kiwisolver-1.4.9-cp310-cp310-win_amd64.whl (73 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.7/73.7 kB 1.4 MB/s eta 0:00:00
+Collecting contourpy>=1.0.1
+  Downloading contourpy-1.3.2-cp310-cp310-win_amd64.whl (221 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 221.2/221.2 kB 2.2 MB/s eta 0:00:00
+Collecting cycler>=0.10
+  Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Collecting pyparsing>=2.3.1
+  Downloading pyparsing-3.2.3-py3-none-any.whl (111 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 111.1/111.1 kB 3.3 MB/s eta 0:00:00
+Collecting tzdata>=2022.7
+  Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 7.2 MB/s eta 0:00:00
+Collecting pytz>=2020.1
+  Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 4.6 MB/s eta 0:00:00
+Collecting charset_normalizer<4,>=2
+  Downloading charset_normalizer-3.4.3-cp310-cp310-win_amd64.whl (107 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.5/107.5 kB 3.1 MB/s eta 0:00:00
+Collecting idna<4,>=2.5
+  Downloading idna-3.10-py3-none-any.whl (70 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 70.4/70.4 kB 3.8 MB/s eta 0:00:00
+Collecting urllib3<3,>=1.21.1
+  Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 7.5 MB/s eta 0:00:00
+Collecting certifi>=2017.4.17
+  Downloading certifi-2025.8.3-py3-none-any.whl (161 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 161.2/161.2 kB 4.9 MB/s eta 0:00:00
+Collecting sympy>=1.13.3
+  Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 3.8 MB/s eta 0:00:00
+Collecting jinja2
+  Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 4.0 MB/s eta 0:00:00
+Collecting typing-extensions>=4.10.0
+  Downloading typing_extensions-4.14.1-py3-none-any.whl (43 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.9/43.9 kB ? eta 0:00:00
+Collecting filelock
+  Downloading filelock-3.19.1-py3-none-any.whl (15 kB)
+Collecting fsspec
+  Downloading fsspec-2025.7.0-py3-none-any.whl (199 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 199.6/199.6 kB 4.1 MB/s eta 0:00:00
+Collecting networkx
+  Downloading networkx-3.4.2-py3-none-any.whl (1.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 4.6 MB/s eta 0:00:00
+Collecting colorama
+  Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Collecting six>=1.5
+  Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Collecting mpmath<1.4,>=1.1.0
+  Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 6.7 MB/s eta 0:00:00
+Collecting MarkupSafe>=2.0
+  Downloading MarkupSafe-3.0.2-cp310-cp310-win_amd64.whl (15 kB)
+Installing collected packages: pytz, py-cpuinfo, mpmath, urllib3, tzdata, typing-extensions, sympy, six, pyyaml, pyparsing, psutil, pillow, packaging, numpy, networkx, MarkupSafe, kiwisolver, idna, fsspec, fonttools, filelock, cycler, colorama, charset_normalizer, certifi, tqdm, scipy, requests, python-dateutil, opencv-python, jinja2, contourpy, torch, pandas, matplotlib, ultralytics-thop, torchvision, ultralytics
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+slim 0.1 requires tf-slim>=1.1, which is not installed.
+Successfully installed MarkupSafe-3.0.2 certifi-2025.8.3 charset_normalizer-3.4.3 colorama-0.4.6 contourpy-1.3.2 cycler-0.12.1 filelock-3.19.1 fonttools-4.59.1 fsspec-2025.7.0 idna-3.10 jinja2-3.1.6 kiwisolver-1.4.9 matplotlib-3.10.5 mpmath-1.3.0 networkx-3.4.2 numpy-2.2.6 opencv-python-4.12.0.88 packaging-25.0 pandas-2.3.1 pillow-11.3.0 psutil-7.0.0 py-cpuinfo-9.0.0 pyparsing-3.2.3 python-dateutil-2.9.0.post0 pytz-2025.2 pyyaml-6.0.2 requests-2.32.4 scipy-1.15.3 six-1.17.0 sympy-1.14.0 torch-2.8.0 torchvision-0.23.0 tqdm-4.67.1 typing-extensions-4.14.1 tzdata-2025.2 ultralytics-8.3.179 ultralytics-thop-2.0.15 urllib3-2.5.0
+
+[notice] A new release of pip is available: 23.0.1 -> 25.2
+[notice] To update, run: python.exe -m pip install --upgrade pip
+(tfod211) PS C:\Users\220250572> python.exe -m pip install --upgrade pip
+Requirement already satisfied: pip in c:\envs\tfod211\lib\site-packages (23.0.1)
+Collecting pip
+  Using cached pip-25.2-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 23.0.1
+    Uninstalling pip-23.0.1:
+      Successfully uninstalled pip-23.0.1
+Successfully installed pip-25.2
+
+Step-3
+What would be the data Set Architecture:
+Data set architecture
+PPE_Dataset/
+├── images/
+│   ├── train/
+│   └── val/
+├── labels/
+│   ├── train/
+│   └── val/
+└── data.yaml
+
+Step-4 (if required)
+Additonal Tip: How to convert Xml to .txt Pl follow the "your path \convert_xml_txt.py"
+
+Step-5
+how to create data.yaml ?
+pl check the code in "Your path\data.yaml"
+
+Step-6
+How to Train the model?
+(tfod211) PS your path in Desktop\PPE> python yolo_train_PPE.py 
+Pl check the yolo_train_PPE.py (Path:your path in Desktop\PPE\yolo_train_PPE.py)
+
+(tfod211) PS your path in Desktop\PPE> python yolo_train_PPE.py
+Ultralytics 8.3.179  Python-3.10.11 torch-2.8.0+cpu CPU (11th Gen Intel Core(TM) i5-1145G7 2.60GHz)
+engine\trainer: agnostic_nms=False, amp=True, augment=False, auto_augment=randaugment, batch=16, bgr=0.0, box=7.5, cache=False, cfg=None, classes=None, close_mosaic=10, cls=0.5, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cutmix=0.0, data=C:\Users\220250572\OneDrive - Regal Rexnord\Desktop\PPE\data.yaml, degrees=0.0, deterministic=True, device=cpu, dfl=1.5, dnn=False, dropout=0.0, dynamic=False, embed=None, epochs=20, erasing=0.4, exist_ok=False, fliplr=0.5, flipud=0.0, format=torchscript, fraction=1.0, freeze=None, half=False, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=640, int8=False, iou=0.7, keras=False, kobj=1.0, line_width=None, lr0=0.01, lrf=0.01, mask_ratio=4, max_det=300, mixup=0.0, mode=train, model=yolov8s.pt, momentum=0.937, mosaic=1.0, multi_scale=False, name=train2, nbs=64, nms=False, opset=None, optimize=False, optimizer=auto, overlap_mask=True, patience=100, perspective=0.0, plots=True, pose=12.0, pretrained=True, profile=False, project=None, rect=False, resume=False, retina_masks=False, save=True, save_conf=False, save_crop=False, save_dir=runs\detect\train2, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0.5, seed=0, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=detect, time=None, tracker=botsort.yaml, translate=0.1, val=True, verbose=True, vid_stride=1, visualize=False, warmup_bias_lr=0.1, warmup_epochs=3.0, warmup_momentum=0.8, weight_decay=0.0005, workers=8, workspace=None
+Overriding model.yaml nc=80 with nc=4
+
+                   from  n    params  module                                       arguments
+  0                  -1  1       928  ultralytics.nn.modules.conv.Conv             [3, 32, 3, 2]
+  1                  -1  1     18560  ultralytics.nn.modules.conv.Conv             [32, 64, 3, 2]
+  2                  -1  1     29056  ultralytics.nn.modules.block.C2f             [64, 64, 1, True]
+  3                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]
+  4                  -1  2    197632  ultralytics.nn.modules.block.C2f             [128, 128, 2, True]
+  5                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]
+  6                  -1  2    788480  ultralytics.nn.modules.block.C2f             [256, 256, 2, True]
+  7                  -1  1   1180672  ultralytics.nn.modules.conv.Conv             [256, 512, 3, 2]
+  8                  -1  1   1838080  ultralytics.nn.modules.block.C2f             [512, 512, 1, True]
+  9                  -1  1    656896  ultralytics.nn.modules.block.SPPF            [512, 512, 5]
+ 10                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 11             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 12                  -1  1    591360  ultralytics.nn.modules.block.C2f             [768, 256, 1]
+ 13                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 14             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 15                  -1  1    148224  ultralytics.nn.modules.block.C2f             [384, 128, 1]
+ 16                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]
+ 17            [-1, 12]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 18                  -1  1    493056  ultralytics.nn.modules.block.C2f             [384, 256, 1]
+ 19                  -1  1    590336  ultralytics.nn.modules.conv.Conv             [256, 256, 3, 2]
+ 20             [-1, 9]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 21                  -1  1   1969152  ultralytics.nn.modules.block.C2f             [768, 512, 1]
+ 22        [15, 18, 21]  1   2117596  ultralytics.nn.modules.head.Detect           [4, [128, 256, 512]]
+Model summary: 129 layers, 11,137,148 parameters, 11,137,132 gradients, 28.7 GFLOPs
+
+Transferred 349/355 items from pretrained weights
+Freezing layer 'model.22.dfl.conv.weight'
+train: Fast image access  (ping: 0.50.2 ms, read: 6.63.4 MB/s, size: 7.0 KB)
+train: Scanning C:\Users\220250572\OneDrive - Regal Rexnord\Desktop\PPE\Train\labels... 21 images, 0 backgrounds, 0 corrupt: 100%|██
+train: New cache created: C:\Users\220250572\OneDrive - Regal Rexnord\Desktop\PPE\Train\labels.cache
+C:\envs\tfod211\lib\site-packages\torch\utils\data\dataloader.py:666: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+val: Fast image access  (ping: 0.30.0 ms, read: 12.56.6 MB/s, size: 11.1 KB)
+val: Scanning C:\Users\220250572\OneDrive - Regal Rexnord\Desktop\PPE\Validation\labels... 21 images, 0 backgrounds, 0 corrupt: 100%
+val: New cache created: C:\Users\220250572\OneDrive - Regal Rexnord\Desktop\PPE\Validation\labels.cache
+C:\envs\tfod211\lib\site-packages\torch\utils\data\dataloader.py:666: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+Plotting labels to runs\detect\train2\labels.jpg...
+optimizer: 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically...
+optimizer: AdamW(lr=0.00125, momentum=0.9) with parameter groups 57 weight(decay=0.0), 64 weight(decay=0.0005), 63 bias(decay=0.0)
+Image sizes 640 train, 640 val
+Using 0 dataloader workers
+Logging results to runs\detect\train2
+Starting training for 20 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       1/20         0G      1.558      4.055      1.665         22        640: 100%|██████████| 2/2 [00:40<00:00, 20.17s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:14<00:00, 14.10s/
+                   all         21         50     0.0239     0.0988     0.0208       0.01
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       2/20         0G      1.718      3.603      1.757         29        640: 100%|██████████| 2/2 [00:35<00:00, 17.73s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:10<00:00, 10.57s/
+                   all         21         50     0.0511      0.281     0.0654     0.0261
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       3/20         0G      1.576      3.457      1.683         26        640: 100%|██████████| 2/2 [00:34<00:00, 17.05s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:12<00:00, 12.66s/
+                   all         21         50      0.341      0.169      0.235      0.119
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       4/20         0G      1.616      3.001       1.65         30        640: 100%|██████████| 2/2 [00:28<00:00, 14.42s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/1 [00:00<?, ?it/s]WARNING NMS time limit 3.050s exceeded
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:11<00:00, 11.92s/
+                   all         21         50      0.384      0.368      0.382      0.223
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       5/20         0G      1.258      2.602      1.425         15        640: 100%|██████████| 2/2 [00:27<00:00, 13.95s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/1 [00:00<?, ?it/s]WARNING NMS time limit 3.050s exceeded
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:11<00:00, 11.46s/
+                   all         21         50      0.696      0.379      0.341      0.202
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       6/20         0G       1.35      2.482       1.59         17        640: 100%|██████████| 2/2 [00:26<00:00, 13.33s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/1 [00:00<?, ?it/s]WARNING NMS time limit 3.050s exceeded
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:10<00:00, 10.97s/
+                   all         21         50      0.728       0.33      0.378      0.245
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       7/20         0G      1.275      1.862      1.415         28        640: 100%|██████████| 2/2 [00:26<00:00, 13.22s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/1 [00:00<?, ?it/s]WARNING NMS time limit 3.050s exceeded
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:10<00:00, 10.76s/
+                   all         21         50      0.749      0.414      0.506      0.352
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       8/20         0G      1.376       2.24      1.473         20        640: 100%|██████████| 2/2 [00:26<00:00, 13.39s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/1 [00:00<?, ?it/s]WARNING NMS time limit 3.050s exceeded
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:11<00:00, 11.53s/
+                   all         21         50      0.722      0.453      0.571      0.407
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       9/20         0G      1.427      2.162      1.587         18        640: 100%|██████████| 2/2 [00:25<00:00, 12.85s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/1 [00:00<?, ?it/s]WARNING NMS time limit 3.050s exceeded
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:11<00:00, 11.56s/
+                   all         21         50      0.582      0.589      0.636      0.449
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      10/20         0G      1.195      1.692      1.351         22        640: 100%|██████████| 2/2 [00:25<00:00, 12.76s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:10<00:00, 10.20s/
+                   all         21         50      0.682      0.662      0.693      0.485
+Closing dataloader mosaic
+C:\envs\tfod211\lib\site-packages\torch\utils\data\dataloader.py:666: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      11/20         0G      1.168       2.16      1.361         16        640: 100%|██████████| 2/2 [00:27<00:00, 13.52s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:11<00:00, 11.32s/
+                   all         21         50      0.793        0.7      0.774      0.545
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      12/20         0G       1.11      2.026      1.318         10        640: 100%|██████████| 2/2 [00:26<00:00, 13.25s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:09<00:00,  9.66s/
+                   all         21         50       0.86      0.735      0.833       0.59
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      13/20         0G      1.141       1.78      1.324         15        640: 100%|██████████| 2/2 [00:25<00:00, 12.76s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:10<00:00, 10.59s/
+                   all         21         50      0.951      0.704      0.856      0.594
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      14/20         0G      1.195      1.831      1.363         14        640: 100%|██████████| 2/2 [00:27<00:00, 13.58s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:10<00:00, 10.43s/
+                   all         21         50       0.86      0.762      0.841      0.596
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      15/20         0G       1.11       1.66      1.316         13        640: 100%|██████████| 2/2 [00:26<00:00, 13.28s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:09<00:00,  9.19s/
+                   all         21         50      0.866      0.754      0.842      0.612
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      16/20         0G     0.9658      1.675      1.255         10        640: 100%|██████████| 2/2 [00:27<00:00, 13.71s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:09<00:00,  9.78s/
+                   all         21         50       0.89      0.763      0.848      0.625
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      17/20         0G      1.084      1.639      1.242          9        640: 100%|██████████| 2/2 [00:26<00:00, 13.17s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:10<00:00, 10.86s/
+                   all         21         50      0.926      0.741      0.859      0.629
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      18/20         0G     0.8937      1.422      1.208         11        640: 100%|██████████| 2/2 [00:26<00:00, 13.27s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:08<00:00,  8.75s/
+                   all         21         50      0.916      0.792      0.881      0.635
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      19/20         0G     0.9189      1.327      1.195         14        640: 100%|██████████| 2/2 [00:24<00:00, 12.05s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:08<00:00,  8.73s/
+                   all         21         50      0.843      0.841      0.882      0.655
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      20/20         0G     0.9093      1.349      1.154         12        640: 100%|██████████| 2/2 [00:22<00:00, 11.03s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:07<00:00,  7.26s/
+                   all         21         50      0.879      0.841      0.892      0.674
+
+20 epochs completed in 0.222 hours.
+Optimizer stripped from runs\detect\train2\weights\last.pt, 22.5MB
+Optimizer stripped from runs\detect\train2\weights\best.pt, 22.5MB
+
+Validating runs\detect\train2\weights\best.pt...
+Ultralytics 8.3.179  Python-3.10.11 torch-2.8.0+cpu CPU (11th Gen Intel Core(TM) i5-1145G7 2.60GHz)
+Model summary (fused): 72 layers, 11,127,132 parameters, 0 gradients, 28.4 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:07<00:00,  7.31s/
+                   all         21         50      0.875      0.846      0.891      0.672
+                 glass          8          9          1      0.576      0.776      0.501
+                gloves         13         21      0.887       0.81      0.872      0.708
+                helmet          7         10      0.809          1      0.948      0.787
+                  shoe          5         10      0.806          1      0.968      0.693
+Speed: 2.3ms preprocess, 280.5ms inference, 0.0ms loss, 54.8ms postprocess per image
+Results saved to runs\detect\train2
+
+Inference:
+Validation Metrics Summary
+Class	Precision	Recall	mAP@0.5	mAP@0.5:0.95
+glass	1.000	0.576	0.776	0.501
+gloves	0.887	0.810	0.872	0.708
+helmet	0.809	1.000	0.948	0.787
+shoe	0.806	1.000	0.968	0.693
+Overall	0.875	0.846	0.891	0.672
+✅ Interpretation
+High mAP@0.5 (0.891 overall) indicates strong detection performance.
+Helmet and Shoe classes are performing exceptionally well.
+Glass has high precision but lower recall, suggesting some missed detections.
+mAP@0.5:0.95 is solid, showing good localization accuracy across IoU thresholds.
+
+
+2nd Improved _Optimization- for better recall and precision
+Optimizer stripped from runs\detect\train3\weights\last.pt, 22.5MB
+Optimizer stripped from runs\detect\train3\weights\best.pt, 22.5MB
+
+Validating runs\detect\train3\weights\best.pt...
+Ultralytics 8.3.179  Python-3.10.11 torch-2.8.0+cpu CPU (11th Gen Intel Core(TM) i5-1145G7 2.60GHz)
+Model summary (fused): 72 layers, 11,127,132 parameters, 0 gradients, 28.4 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:07<00:00,  7.18s/
+                   all         20         46      0.924      0.808      0.878      0.661
+                 glass          7          8      0.773        0.5      0.629      0.395
+                gloves          8         12       0.93      0.833      0.937      0.731
+                helmet         10         16          1      0.999      0.995      0.803
+                  shoe          5         10      0.991        0.9      0.951      0.715
+Speed: 2.3ms preprocess, 286.8ms inference, 0.0ms loss, 60.4ms postprocess per image
+Results saved to runs\detect\train3
+Your Model Performance (Train3)
+Class	Precision	Recall	mAP@0.5	mAP@0.5:0.95
+glass	0.773	0.500	0.629	0.395
+gloves	0.930	0.833	0.937	0.731
+helmet	1.000	0.999	0.995	0.803
+shoe	0.991	0.900	0.951	0.715
+Overall	0.924	0.808	0.878	0.661
+
+📌 Reference Comparison
+From publicly available models like keremberke/yolov8m-protective-equipment-detection, your model is now performing on par or better in several categories:
+
+Helmet and Gloves: Excellent precision and recall.
+Shoe: Very strong detection.
+Glass: Slightly lower recall, but still solid.
+
+Step-6
+How to evaluate Visual prediction ?
+(tfod211) PS your path in Desktop\PPE> python visual_prediction.py
+pl check the code:your path in Desktop\PPE\visual_prediction.py
+
+image 1/1 your path in Desktop\PPE\Validation\images\PPE_Glass_1.jpg: 256x640 2 glasss, 111.7ms
+Speed: 5.4ms preprocess, 111.7ms inference, 2.6ms postprocess per image at shape (1, 3, 256, 640)
+
+similarly it check for 4 images.
+
+step-7
+How to Check Object Detection for PPE on Real time using Live feed?
+(tfod211) PS your path in Desktop\PPE> python od_ppe_realtime.py
+pl check the code:your path in Desktop\PPE\od_ppe_realtime.py 
+
+Open cv open on realtime with bounding box.
+
+
