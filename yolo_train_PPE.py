@@ -4,5 +4,6 @@ from ultralytics import YOLO
 model = YOLO('yolov8s.pt')
 
 # Train the model
-model.train(data=r'C:\Users\220250572\OneDrive - Regal Rexnord\Desktop\PPE\data.yaml', epochs=20, imgsz=640)
+model.train(data=r'copy your path\Desktop\PPE\data.yaml', epochs=20, imgsz=640)
+
 
