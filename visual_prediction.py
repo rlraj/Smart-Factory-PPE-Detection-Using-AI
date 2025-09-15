@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import cv2
 
 # Load the trained YOLOv8 model
-model = YOLO(r'C:\Users\220250572\OneDrive - Regal Rexnord\Desktop\PPE\runs\detect\train3\weights\best.pt')
+model = YOLO(r'copy your path\runs\detect\train3\weights\best.pt')
 
 # Path to validation images
 val_images_path = 'C:/Users/220250572/OneDrive - Regal Rexnord/Desktop/PPE/Validation/images'
@@ -33,3 +33,4 @@ for image_path in sample_images:
     plt.title(f"Predictions for {os.path.basename(image_path)}")
     plt.axis('off')
     plt.show()
+
