@@ -10,7 +10,7 @@ class_map = {
 }
 
 # Folder containing XML files
-xml_folder = r'C:\Users\220250572\OneDrive - Regal Rexnord\Desktop\PPE\Train\labels'  # <-- Update this path
+xml_folder = r'copy your path\Desktop\PPE\Train\labels'  # <-- Update this path
 
 # Output folder for YOLO TXT files
 output_folder = os.path.join(xml_folder, 'yolo_labels')
@@ -55,3 +55,4 @@ for file in os.listdir(xml_folder):
         convert(os.path.join(xml_folder, file))
 
 print("✅ All XML files converted to YOLO format.")
+
