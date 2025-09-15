@@ -7,7 +7,7 @@ import cv2
 model = YOLO(r'copy your path\runs\detect\train3\weights\best.pt')
 
 # Path to validation images
-val_images_path = 'C:/Users/220250572/OneDrive - Regal Rexnord/Desktop/PPE/Validation/images'
+val_images_path = 'copy your path /Desktop/PPE/Validation/images'
 
 # Get sample images
 sample_images = [os.path.join(val_images_path, img) for img in os.listdir(val_images_path) if img.lower().endswith(('.jpg', '.jpeg', '.png'))][:5]
@@ -33,4 +33,5 @@ for image_path in sample_images:
     plt.title(f"Predictions for {os.path.basename(image_path)}")
     plt.axis('off')
     plt.show()
+
 
