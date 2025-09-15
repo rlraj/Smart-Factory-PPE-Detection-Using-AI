@@ -2,7 +2,7 @@ from ultralytics import YOLO
 import cv2
 
 # Load the trained model
-model = YOLO(r'C:\Users\220250572\OneDrive - Regal Rexnord\Desktop\PPE\runs\detect\train3\weights\best.pt')
+model = YOLO(r'copy your path \runs\detect\train3\weights\best.pt')
 
 # Start webcam
 cap = cv2.VideoCapture(0)  # Use 0 for default webcam
@@ -34,3 +34,4 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
+
