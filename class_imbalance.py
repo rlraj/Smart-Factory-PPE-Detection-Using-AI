@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 class_names = ['glass', 'gloves', 'helmet', 'shoe']
 class_counts = {i: 0 for i in range(len(class_names))}
 
-label_folder = 'C:/Users/220250572/OneDrive - Regal Rexnord/Desktop/PPE/Train/labels'  # Update as needed
+label_folder = 'copy your path/Desktop/PPE/Train/labels'  # Update as needed
 
 for filename in os.listdir(label_folder):
     if filename.endswith('.txt'):
@@ -30,4 +30,5 @@ plt.title('Class Distribution in YOLO Dataset')
 plt.grid(axis='y')
 plt.tight_layout()
 plt.show()
+
 
