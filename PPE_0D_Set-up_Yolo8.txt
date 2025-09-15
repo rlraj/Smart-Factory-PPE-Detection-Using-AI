@@ -353,7 +353,7 @@ mAP@0.5:0.95 is solid, showing good localization accuracy across IoU thresholds.
 
 2nd Improved _Optimization- for better recall and precision
 Optimizer stripped from runs\detect\train3\weights\last.pt, 22.5MB
-Optimizer stripped from runs\detect\train3\weights\best.pt, 22.5MB
+Optimizer stripped from runs\detect\train3\weights\best.pt, 22.5MB (This is the location where model is trained and validated.....) you have use this location in. data yaml
 
 Validating runs\detect\train3\weights\best.pt...
 Ultralytics 8.3.179  Python-3.10.11 torch-2.8.0+cpu CPU (11th Gen Intel Core(TM) i5-1145G7 2.60GHz)
@@ -397,5 +397,6 @@ How to Check Object Detection for PPE on Real time using Live feed?
 pl check the code:your path in Desktop\PPE\od_ppe_realtime.py 
 
 Open cv open on realtime with bounding box.
+
 
 
